@@ -1,0 +1,66 @@
+# Data files - never commit raw or processed data
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+data/powerbi/
+
+# Keep the folder structure but ignore contents
+!data/raw/.gitkeep
+!data/bronze/.gitkeep
+!data/silver/.gitkeep
+!data/gold/.gitkeep
+!data/powerbi/.gitkeep
+
+# Large generated files
+*.csv
+*.parquet
+*.snappy.parquet
+
+# Python compilation artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments & backups
+.env
+env.bak/
+
+# Spark logs and event logs
+logs/
+spark-events/
+derby.log
+metastore_db/
+*.log
+
+# Spark checkpoint directories
+checkpoint/
+tmp/
+
+# Docker volumes and overrides
+docker-compose.override.yml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PyArrow and PySpark temp files
+*.arrow
+*.tmp
+
+# OS files
+.DS_Store
+thumbs.db
+Desktop.ini
+
+# Credentials and secrets
+*.pem
+*.key
+secrets/
+credentials/
